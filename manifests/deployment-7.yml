@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "krispil-2c19"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "krispil-2c19"
+  template:
+    metadata:
+      labels:
+        app: "krispil-2c19"
+    spec:
+      containers:
+        - name: "krispil-2c19"
+          image: "krispil.azurecr.io/krispil"
+          ports:
+          - containerPort: 80
